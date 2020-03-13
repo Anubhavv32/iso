@@ -1,0 +1,89 @@
+.Absolute-Center {
+    margin: auto;
+    position: relative;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin-top: 73px;
+    background-color: white;
+} 
+.Absolute-Center.is-Responsive {
+    min-width: 200px;
+    height: 719px;
+    width: 705px;
+    border-radius: 8px;
+    padding: 40px;
+}
+.signup-go {
+    height: 20px;
+    color: #5F5E5E !important;
+    font-family: "Avenir Next";
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+}
+.login {
+    height: 68px;
+    color: #5F5E5E !important;
+    font-family: "Avenir Next" !important;
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 45px;
+    text-align: center;
+}
+.rectangle {
+    box-sizing: border-box;
+    height: 77px;
+    border-radius: 7px;
+    background: #F2F8FB !important;
+    margin-top: 60px;
+}
+.rectangle:focus {
+    border: 3px solid #619EB2;
+}
+.rectangle-p{
+    margin-top: 32px;
+    box-sizing: border-box;
+    height: 77px;
+    border-radius: 7px;
+    background-color: #F2F8FB !important; 
+}
+.rectangle-p:focus {
+    border: 3px solid #619EB2;
+    outline: none;
+}
+.forget-pass-link {
+    height: 20px;
+    width: 159px;
+    color: #565656;
+    font-family: "Avenir Next" !important;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px !important;
+    text-align: left;
+    float: left;
+}
+.button-background {
+    height: 58px;
+    width: 627px;
+    border-radius: 36px;
+    background-color: #A8DBAF;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    color: white !important;
+    margin-top: 73px !important;
+    border-color: transparent !important;
+}
+.button-background:focus, .button-background:hover, .button-background:active  {
+    background-color: #A8DBAF;
+}
+.agree-mark {
+    height: 46px;
+    width: 608px;
+    color: #5F5E5E !important;
+    font-family: "Avenir Next";
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1.27px;
+    line-height: 23px;
+    text-align: center;
+    margin-top: 23px;
+}
