@@ -3,6 +3,24 @@ import './home.css';
 import Header from '../../components/header';
 import {img} from './Ovalblue3.png'
 export default class Home extends Component {
+  constructor(){
+    super()
+    this.state = {
+      email:"",partOne:true
+    }
+  }
+  emailChangeHandler=(e)=>{
+    console.log(e.target.name,e.target.value)
+    this.setState({[e.target.name]:e.target.value},()=>{
+      console.log(this.state.email)
+    })
+  }
+  submitHandler=(e)=>{
+    e.preventDefault()
+    if(this.state.email !== ""){
+      this.setState({partOne:!this.state.partOne})
+    }
+  }
     render() {
         return (
             <div className="container-fluid">
@@ -22,30 +40,69 @@ export default class Home extends Component {
                         <button type="button" class="btn btn-info btn-login" data-toggle="modal" data-target="#exampleModalLong">Log in to your account</button>
                         <div className="modal fade " id="exampleModalLong" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div className="modal-dialog modal-width modal-dialog-centered" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-            <label className="modal-title">isoshealth</label>
-              
-              <button type="button circle" className="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">×</span>
-              </button>
-             
-            </div>
-            <div className="modal-body row">
-            <p className="content" >Enter your email to sign in or create an account</p>
+        {this.state.partOne && 
+         <div className="modal-content">
+          
+         <div className="modal-header">
+         <label className="modal-title">isoshealth</label>
            
-            <div class="input-group mb-3">
-  <div className="input-group-prepend">
-    <span className="input-group-text" id="basic-addon1">@</span>
-  </div>
-  <input type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
-</div>
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" className="btn btn-primary">Save changes</button>
-            </div>
-          </div>
+           <button type="button circle" className="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">×</span>
+           </button>
+          
+         </div>
+         <div className="modal-body row">
+         <p className="content" >Enter your email to sign in or create an account</p>
+        
+         <div class="input-group mb-3 input-modal">
+           <div className="input-group-prepend">
+           <span className="input-group-text" id="basic-addon1">@</span>
+           </div>
+           <input type="email" className="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" onChange={this.emailChangeHandler} name="email"/>
+         </div>
+        
+         <div className="row terms">
+         <p className="content" >By signing up, you agree to our terms and privacy policy.</p>
+         </div>
+         </div>
+         <div className="modal-footer ">
+           <button type="button" onClick = {this.submitHandler} className="btn" >Submit</button>
+           
+         </div>
+       </div>}
+       {
+         !this.state.partOne && 
+         <div className="modal-content">
+          
+         <div className="modal-header">
+         <label className="modal-title">isoshealth</label>
+           
+           <button type="button circle" className="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">×</span>
+           </button>
+          
+         </div>
+         <div className="modal-body row">
+       <p className="content" >An email with the code has been sent to {this.state.email}</p>
+        
+         <div class="input-group mb-3 input-modal">
+           <div className="input-group-prepend">
+           <span className="input-group-text" id="basic-addon1">@</span>
+           </div>
+           <input type="text" className="form-control" placeholder="Code" aria-label="Username" aria-describedby="basic-addon1" onChange={this.codeChangeHandler} />
+         </div>
+        
+         <div className="row terms">
+         <p className="content" >Did not get the code?</p>
+         </div>
+         </div>
+         <div className="modal-footer ">
+           <button type="button" onClick = {this.submitCodeHandler} className="btn" >Submit</button>
+           
+         </div>
+       </div>
+       }
+         
         </div>
       </div>
                         </div>

@@ -1,0 +1,52 @@
+.our-physical-health {
+    height: 33px;
+    width: 1043px;
+    color: #333333;
+    font-family: MetaBold;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: left;
+    justify-content: left;
+}
+
+
+.img-circle {
+    width: 100px !important;
+    height: 100px
+}
+
+.more {
+
+    justify-content: center;
+}
+.content {
+    text-align: center !important; 
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.select {
+    text-align: left;
+}
+@media only screen and (min-width: 940px) {
+
+    .card-pack {
+        margin-left: 5%;
+    }
+    .pack {
+        margin-left: 4%;
+        margin-bottom: 4%;
+    }
+    /* .card-pack2 {
+        margin-left: 9%;
+        margin-right: 7.5%;
+    } */
+
+}
+
+@media only screen and (max-width: 576px) {
+    
+    .card-pack {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

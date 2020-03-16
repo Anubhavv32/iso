@@ -48,3 +48,18 @@
     float: center;
 }
 .input-group-addon{color:#ff0000; background-color: #ffffff;}
+.terms {
+    background: grey;
+    color: white;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 10px;
+}
+.input-modal {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.modal-footer {
+    justify-content: space-around !important;
+    background-color: blue;
+}
